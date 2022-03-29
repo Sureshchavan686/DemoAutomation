@@ -38,7 +38,7 @@ public class RegisterUser_PageObject extends BaseLibrary {
 	@FindBy(xpath = "//input[@type='radio' and @value='FeMale']")
 	public static WebElement rd_female;
 
-	@FindBy(xpath = "//input[@type='checkbox' and @value='Cricket11']")
+	@FindBy(xpath = "//input[@type='checkbox' and @value='Cricket']")
 	public static WebElement chk_hobby1;
 
 	@FindBy(xpath = "//input[@type='checkbox' and @value='Hockey']")
