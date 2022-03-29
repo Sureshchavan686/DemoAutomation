@@ -46,6 +46,7 @@ public class Hooks extends DriverManager{
 			//File destFile = new File("src//test//resources//Screenshots//failed_"+locaDate+ ".png");
 			FileUtils.copyFile(scrFile, new File(".//Screenshots//" + locaDate + ".png"));
 			driver.quit();
+			
 		}
 		
 		else
