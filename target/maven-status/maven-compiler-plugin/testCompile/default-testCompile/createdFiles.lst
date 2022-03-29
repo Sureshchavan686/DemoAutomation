@@ -1,0 +1,11 @@
+com\trial\Features.class
+com\constants\BaseLibrary.class
+com\pageobjects\RegisterUser_PageObject.class
+com\stepdefinitions\Hooks.class
+com\utility\UploadFile.class
+com\constants\AutomationConstants.class
+com\constants\DriverManager.class
+com\stepdefinitions\RegisterUser.class
+com\TestRunner\Runner.class
+com\trial\DemoFrames.class
+com\trial\DryRun.class
