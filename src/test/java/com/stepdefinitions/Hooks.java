@@ -28,7 +28,7 @@ public class Hooks extends DriverManager{
 		
 		driver = getDriver();
 		driver.manage().window().maximize();
-		driver.get("http://demo.automationtesting.in/");
+		driver.get("https://www.naukri.com/");
 		
 	
 	}
@@ -49,8 +49,7 @@ public class Hooks extends DriverManager{
 			
 		}
 		
-		else
-		driver.quit();
+		//driver.quit();
 	}
 	
 	/*

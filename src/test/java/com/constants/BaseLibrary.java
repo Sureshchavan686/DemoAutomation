@@ -3,8 +3,10 @@ package com.constants;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,6 +26,18 @@ public class BaseLibrary extends DriverManager {
 	}
 
 	public void sendValue(String value, WebElement element) {
+		try {
+			if (driver != null)
+				// waitTill(5);Z
+				element.sendKeys(value);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void sendKeyBoardkey(Keys value, WebElement element) {
 		try {
 			if (driver != null)
 				// waitTill(5);Z
@@ -59,6 +73,22 @@ public class BaseLibrary extends DriverManager {
 		}
 		return element;
 
+	}
+	
+	public void mouseHover(WebElement element)
+	{
+		try
+		{
+			waitForElement(element);
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element);
+			actions.perform();
+			
+		}
+		catch (Exception e) {
+			System.out.println("Nothing mouse hover");
+		}
+		
 	}
 
 }

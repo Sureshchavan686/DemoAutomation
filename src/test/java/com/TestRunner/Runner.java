@@ -9,10 +9,11 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-features="src/test/resources/Features/RegisterUser.feature",
+features="src/test/resources/Features/UpdateNaukriProfile.feature",
 glue="com.stepdefinitions",
-plugin = {"pretty","html:target/cucumber","json:target/cucumber.json"},
+plugin = {"pretty","html:target/cucumber","json:target/cucumber.json","rerun:target/rerun.txt"},
 dryRun=false
+
 
 )
 

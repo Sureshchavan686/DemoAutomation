@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.constants.BaseLibrary;
@@ -78,7 +79,6 @@ public class RegisterUser_PageObject extends BaseLibrary {
 	public static WebElement btn_submit;
 	
 	
-
 	public void open_register_form() {
 		System.out.println("Inside register method");
 		click(btn_Register);
