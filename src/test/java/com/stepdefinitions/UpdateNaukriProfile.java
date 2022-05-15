@@ -28,7 +28,7 @@ public class UpdateNaukriProfile extends DriverManager{
 	}
 
 	@Then("User updates profile by making changes")
-	public void user_updates_profile_by_making_changes() {
+	public void user_updates_profile_by_making_changes()  {
 		no.updateProfile();
 		no.logOut();
 	}

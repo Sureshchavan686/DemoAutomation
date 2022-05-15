@@ -1,5 +1,7 @@
 package com.pageobjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -51,14 +53,23 @@ public class NaukriProfile_PageObjects extends BaseLibrary{
 		
 	}
 	
-	public void updateProfile()
+	public void updateProfile() 
 	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		click(lbl_profileName);
 		waitTill("3");
 		click(btn_editResumeHeader);
-		sendKeyBoardkey(Keys.DELETE, txt_resumeHeader);
-		sendValue(".", txt_resumeHeader);
+		click(txt_resumeHeader);
+		sendValue("\b", txt_resumeHeader);
 		click(btn_save);
+		waitTill("5");
+		click(btn_editResumeHeader);
+		click(txt_resumeHeader);
+		waitTill("7");
+		sendValue("2", txt_resumeHeader);
+		click(btn_save);
+		
+		
 	}
 	
 	public void logOut()

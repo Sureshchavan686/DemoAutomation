@@ -45,11 +45,10 @@ public class Hooks extends DriverManager{
 			String locaDate = timeStampPattern.format(localDateTime);
 			//File destFile = new File("src//test//resources//Screenshots//failed_"+locaDate+ ".png");
 			FileUtils.copyFile(scrFile, new File(".//Screenshots//" + locaDate + ".png"));
-			driver.quit();
 			
 		}
 		
-		//driver.quit();
+		driver.quit();
 	}
 	
 	/*
