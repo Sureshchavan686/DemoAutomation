@@ -2,8 +2,10 @@ package com.stepdefinitions;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -34,18 +36,18 @@ public class Hooks extends DriverManager{
 	}
 	
 	@After()
-	public void tearDown(Scenario scenario) throws IOException
+	public void tearDown(Scenario scenario) throws IOException, InterruptedException
 	{
 		if(scenario.isFailed())
 		{
 			TakesScreenshot scr = ((TakesScreenshot)driver);
 			File scrFile = scr.getScreenshotAs(OutputType.FILE);
-			DateTimeFormatter timeStampPattern = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy HH:mm:ss a");
-			LocalDateTime localDateTime = LocalDateTime.now();	
-			String locaDate = timeStampPattern.format(localDateTime);
-			//File destFile = new File("src//test//resources//Screenshots//failed_"+locaDate+ ".png");
-			FileUtils.copyFile(scrFile, new File(".//Screenshots//" + locaDate + ".png"));
+			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			File destFile = new File(System.getProperty("user.dir") + "/Screenshots/" + "New Screenshot " + dateName + ".png");
+			FileUtils.copyFile(scrFile, destFile);
 			
+			Thread.sleep(3);
+			driver.quit();
 		}
 		
 		driver.quit();
