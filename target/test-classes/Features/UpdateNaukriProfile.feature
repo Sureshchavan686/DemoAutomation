@@ -7,5 +7,5 @@ Then User updates profile by making changes
 
 
 Examples: 
-|Username	|Password	|
-|sureshrc06@gmail.com	|766945707	|
+|Username				|Password	|
+|sureshrc06@gmail.com	|7676945707	|

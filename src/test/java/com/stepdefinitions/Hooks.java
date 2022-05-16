@@ -53,11 +53,5 @@ public class Hooks extends DriverManager{
 		driver.quit();
 	}
 	
-	/*
-	 * DateTimeFormatter FOMATTER =
-	 * DateTimeFormatter.ofPattern("MM/dd/yyyy 'at' hh:mm a");
-	 * 
-	 * String timestamp = new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new
-	 * Date()); FileUtils.copyFile(scrFile, new File( "E:\\Edureka\\signup.png"
-	 		+ fileName + " " + timestamp + ".png"));*/
+	
 }
