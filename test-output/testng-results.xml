@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38" started-at="2022-04-27T09:34:13 IST" finished-at="2022-04-27T09:34:13 IST">
+  <suite name="Default suite" duration-ms="12115" started-at="2022-06-01T07:49:38 IST" finished-at="2022-06-01T07:49:51 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38" started-at="2022-04-27T09:34:13 IST" finished-at="2022-04-27T09:34:13 IST">
-      <class name="com.testngDemo.Demo">
-        <test-method status="PASS" signature="testRun()[pri:-1, instance:com.testngDemo.Demo@6a1aab78]" name="testRun" duration-ms="7" started-at="2022-04-27T09:34:13 IST" finished-at="2022-04-27T09:34:13 IST">
+    <test name="Default test" duration-ms="12115" started-at="2022-06-01T07:49:38 IST" finished-at="2022-06-01T07:49:51 IST">
+      <class name="com.trial.Upload">
+        <test-method status="PASS" signature="uploadFile()[pri:0, instance:com.trial.Upload@37374a5e]" name="uploadFile" duration-ms="12073" started-at="2022-06-01T07:49:38 IST" finished-at="2022-06-01T07:49:51 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRun -->
-      </class> <!-- com.testngDemo.Demo -->
+        </test-method> <!-- uploadFile -->
+      </class> <!-- com.trial.Upload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

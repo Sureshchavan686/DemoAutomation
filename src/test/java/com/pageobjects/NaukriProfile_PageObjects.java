@@ -1,12 +1,15 @@
 package com.pageobjects;
 
+import java.awt.AWTException;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.constants.AutomationConstants;
 import com.constants.BaseLibrary;
 
 public class NaukriProfile_PageObjects extends BaseLibrary{
@@ -41,6 +44,8 @@ public class NaukriProfile_PageObjects extends BaseLibrary{
 	@FindBy(xpath = "//li//a[@title='Logout']")
 	public static WebElement btn_logout;
 	
+	@FindBy(xpath = "//div[@class='uploadBtn']")
+	public static WebElement btn_updateResume;
 	
 	
 	public void loginToNaukri(String uname,String pass)
@@ -72,6 +77,14 @@ public class NaukriProfile_PageObjects extends BaseLibrary{
 		
 	}
 	
+	public void uploadResumeFile() throws AWTException
+	{
+		
+		waitTill("5");
+		btn_updateResume.click();
+		waitTill("8");
+		uploadResume();
+	}
 	public void logOut()
 	{
 		Actions actions = new Actions(driver);

@@ -1,5 +1,7 @@
 package com.stepdefinitions;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.constants.DriverManager;
@@ -28,8 +30,10 @@ public class UpdateNaukriProfile extends DriverManager{
 	}
 
 	@Then("User updates profile by making changes")
-	public void user_updates_profile_by_making_changes()  {
+	public void user_updates_profile_by_making_changes() throws AWTException  {
+		
 		no.updateProfile();
+		no.uploadResumeFile();
 		no.logOut();
 	}
 }

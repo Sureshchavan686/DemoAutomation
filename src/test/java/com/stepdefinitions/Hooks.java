@@ -3,16 +3,14 @@ package com.stepdefinitions;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import com.constants.AutomationConstants;
 import com.constants.DriverManager;
 
 import io.cucumber.java.After;
@@ -48,6 +46,7 @@ public class Hooks extends DriverManager{
 			
 			Thread.sleep(3);
 			driver.quit();
+			
 		}
 		
 		driver.quit();

@@ -82,6 +82,7 @@ public class RegisterUser_PageObject extends BaseLibrary {
 	public void open_register_form() {
 		System.out.println("Inside register method");
 		click(btn_Register);
+		btn_Register.isEnabled();
 	}
 
 	public void enter_user_details1(String fname, String lname, String address) {

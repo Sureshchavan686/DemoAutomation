@@ -10,5 +10,4 @@ public class AutomationConstants {
 	public static final String PropertiesFile ="./data.properties";
 	public static final File ScreenShotFile = new File("test-output//Screenshots//failed-scenario.img");
 	public static final String ProjectPath = "H:\\Advanced Selenium-Appium Workspace\\Latest_features_of_Selenium\\Screenshots\\screenshot_";
-
 }
